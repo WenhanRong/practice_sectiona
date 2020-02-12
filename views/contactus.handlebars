@@ -1,0 +1,30 @@
+{{#each messages}}
+
+    <div class="errors">{{this}}</div>
+
+{{/each}}
+
+<!-- This is for when the user submits the form without any errors-->
+<p>
+    {{message}}
+</p>
+
+<form method="POST" action="/contact-us">
+
+<label for="firstNmae">Frist Name</label>
+<input type="text" id="firstName" name="firstName" value={{firstName}}><br>
+
+<label for="lastNmae">Last Name</label>
+<input type="text" id="lastName" name="lastName" value={{lastName}}><br>
+
+<label for="message">Message</label>
+<textarea id="message" name="message">{{message}}</textarea><br>
+
+<input type="submit" value="Contact Us">
+
+<!-- or <button type="submit"></button> -->
+
+
+</form>
+
+<!--  firstName=Wenhan&lastName=Rong&Message=Exam is on Wednesday -->
